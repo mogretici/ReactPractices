@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Counter from './Components/counter';
+import InputExample from './Components/InputExample'
 
 import reportWebVitals from './reportWebVitals';
 
@@ -12,6 +13,8 @@ root.render(
     <App />
     < hr/>
     <Counter />
+    < hr/>
+    <InputExample />
   </React.StrictMode>
 );
 
