@@ -46,7 +46,8 @@ const [users, setUsers] = useState([]);
       </ul>
  <Outlet />
       <Routes>
-      <Route path="/:id" element={<User />} > 
+      <Route path="/:id" element={<User />} /> 
+      <Route path="/" element={<h2>Please select a user..</h2>}  > 
       </Route>
     </Routes>
 
