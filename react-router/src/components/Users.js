@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes, Outlet } from "react-router-dom";
+import { NavLink, Route, Routes, Outlet } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import User from "./User";
@@ -28,8 +28,8 @@ const [users, setUsers] = useState([]);
       voluptas corrupti. Tenetur nostrum delectus optio quos. Autem odit dicta
       error, vel illo in quibusdam quae cum vero inventore, itaque maiores.
       <br />
-      <Link to="/">Home</Link> <br />
-      <Link to="/about">About</Link>
+      <NavLink to="/"  >Home</NavLink> <br />
+      <NavLink to="/about"  >About</NavLink>
 
       <h1>Users</h1>
       {loading && <p>Loading...</p>}
@@ -37,7 +37,9 @@ const [users, setUsers] = useState([]);
       <ul> 
       {users.map((user) => (
       <li key={user.id} style={{listStyle:"none"}}> 
-      <Link to={`${user.id}`}>{user.name}</Link>
+      <NavLink style={({ isActive }) =>
+              isActive ? {backgroundColor:"black", color:"white"} : undefined
+            } to={`${user.id}`}  >{user.name}</NavLink>
       </li>
 
       ))}

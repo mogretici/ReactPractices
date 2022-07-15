@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { useParams , Link} from 'react-router-dom'
+import { useParams , NavLink} from 'react-router-dom'
 import axios from 'axios';
 
 
@@ -29,8 +29,8 @@ return (
              </div> }
 
           <br />
-            <Link to={`/users/${parseInt(id)-1}`}> &lt;&lt; Prev </Link> &emsp;
-            <Link to={`/users/${parseInt(id) + 1}`}> Next &gt;&gt; </Link>
+            <NavLink to={`/users/${parseInt(id)-1}`}  > &lt;&lt; Prev </NavLink> &emsp;
+            <NavLink to={`/users/${parseInt(id) + 1}`}  > Next &gt;&gt; </NavLink>
             
 
     </div>

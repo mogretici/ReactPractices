@@ -1,6 +1,7 @@
-import {Routes, Route, Link } from "react-router-dom";
+import {Routes, Route, NavLink } from "react-router-dom";
 import './App.css';
 import Users from './components/Users'
+import Error404 from './components/Error404'
 import React from 'react';
 
 
@@ -12,6 +13,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="users/*" element={<Users />} />
+      <Route path="*" element={<Error404 />} />
+
   
 
     </Routes>
@@ -27,8 +30,8 @@ function Home() {
         <p>You can do this, I believe in you.</p>
       </main>
       <nav>
-        <Link to="/about">About</Link> <br />
-        <Link to="/users">Users</Link>
+        <NavLink to="/about" >About</NavLink> <br />
+        <NavLink to="/users" >Users</NavLink>
 
       </nav>
     </>
@@ -46,8 +49,8 @@ function About() {
         </p>
       </main>
       <nav>
-        <Link to="/">Home</Link> <br />
-        <Link to="/users">Users</Link>
+        <NavLink to="/" >Home</NavLink> <br />
+        <NavLink to="/users"  >Users</NavLink>
 
 
       </nav>
