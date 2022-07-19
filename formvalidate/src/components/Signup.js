@@ -33,7 +33,7 @@ function Signup() {
         /> 
         <br /><br />
         <TextField
-        error={formik.errors.password && formik.touched.passwordConfirm}
+        error={formik.errors.password && formik.touched.password}
           id="outlined2"
           name="password"
           label={formik.errors.password && formik.touched.password ? "Invalid password" : "Password"}
