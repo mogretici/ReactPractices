@@ -1,6 +1,6 @@
-##Emoji Search
+#Emoji Search
 ---
-##sample Project For Testing
+#sample Project For Testing
 
 -Başlık kısmının başarılı bir şekilde render edildiğini kontrol edecek olan test kodunun yazımı.
 -Uygulama ilk açıldığında emoji listesinin başarılı bir şekilde render edildiğini kontrol edecek olan test kodunun yazımı.
